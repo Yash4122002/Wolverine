@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wolverine Automobiles</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #041832;
+      color: white;
+    }
+    header {
+      background-color: #041832;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 60px;
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #f5d300;
+    }
+    .tagline {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #f5d300;
+      margin: 1rem;
+    }
+    .slideshow {
+      margin: 2rem auto;
+      background: #08254a;
+      width: 80%;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .slide-text {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    .section {
+      display: flex;
+      justify-content: space-around;
+      margin: 3rem 2rem;
+    }
+    .section div {
+      max-width: 400px;
+    }
+    .section h2 {
+      color: #f5d300;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .gallery img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #020f1e;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Wolverine Logo" />
+    <h1>Wolverine</h1>
+  </header>
+
+  <div class="tagline">
+    Comfort in every Mile, Safety in every turn, Savings in every drop
+  </div>
+
+  <div class="slideshow">
+    <h2>Key Features</h2>
+    <div class="slide-text" id="slide">🛡️ Safety - Advanced safety features to protect you on the road.</div>
+  </div>
+
+  <div class="section">
+    <div>
+      <h2>VISION</h2>
+      <p>To redefine urban mobility by delivering vehicles that blend cutting-edge safety, unmatched comfort, and eco-conscious affordability.</p>
+    </div>
+    <div>
+      <h2>MISSION</h2>
+      <p>To engineer high-performance automobiles that prioritize human lives, enrich every journey with comfort, and empower customers with economic value—driving a better tomorrow.</p>
+    </div>
+  </div>
+
+  <h2 style="text-align:center; color: #f5d300;">About Wolverine</h2>
+  <div class="gallery">
+    <img src="front_view.png" alt="Wolverine Car Front View">
+    <img src="side_view.png" alt="Wolverine Car Side View">
+    <img src="interior_view.png" alt="Wolverine Car Interior">
+  </div>
+
+  <footer>
+    &copy; 2025 Wolverine Automobiles. All rights reserved.
+  </footer>
+
+  <script>
+    const features = [
+      "🛡️ Safety - Advanced safety features to protect you on the road.",
+      "🛋️ Comfort - Enjoy a smoother, quieter, more luxurious ride.",
+      "💰 Economic - Designed to maximize fuel efficiency and value."
+    ];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % features.length;
+      document.getElementById("slide").innerText = features[index];
+    }, 3000);
+  </script>
+</body>
+</html>
